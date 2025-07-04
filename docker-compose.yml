@@ -1,0 +1,10 @@
+services:
+  # Serviço da API FastAPI
+  api:
+    build: .
+    container_name: gestao-escolar-api
+    ports:
+      - "8000:8000"
+    volumes:
+      # Monta o código local no contêiner para live-reloading
+      - .:/app
